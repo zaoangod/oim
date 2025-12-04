@@ -41,7 +41,9 @@ cp -R ${rime_deps_directory}/share/opencc ${base_directory}/library/rime/share/
 # 跳过构建 librime 和 opencc 数据，使用下载的二进制文件
 make copy-rime-binary copy-opencc-data
 
-# git submodule update --init plum
+echo "SQUIRREL_BUNDLED_RECIPES=${SQUIRREL_BUNDLED_RECIPES}"
 
-# rime_dir=plum/output bash plum/rime-install ${SQUIRREL_BUNDLED_RECIPES}
-# make copy-plum-data
+git submodule update --init plum
+# install Rime recipes
+rime_dir=plum/output bash plum/rime-install ${SQUIRREL_BUNDLED_RECIPES}
+make copy-plum-data

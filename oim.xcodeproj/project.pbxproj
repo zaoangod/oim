@@ -10,13 +10,64 @@
 		669ED2EB2EE17DE2005F3ECA /* InputMethodKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669ED2EA2EE17DE2005F3ECA /* InputMethodKit.framework */; };
 		669ED2ED2EE17DEF005F3ECA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669ED2EC2EE17DEF005F3ECA /* QuartzCore.framework */; };
 		669ED2EF2EE17DFA005F3ECA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669ED2EE2EE17DFA005F3ECA /* UserNotifications.framework */; };
+		669ED2FB2EE1866E005F3ECA /* librime.1.dylib in Copy 3rd-party Frameworks */ = {isa = PBXBuildFile; fileRef = 669ED2FA2EE1866E005F3ECA /* librime.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		669ED3002EE18702005F3ECA /* librime-predict.dylib in Copy Rime plugins */ = {isa = PBXBuildFile; fileRef = 669ED2FD2EE18702005F3ECA /* librime-predict.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		669ED3012EE18702005F3ECA /* librime-octagram.dylib in Copy Rime plugins */ = {isa = PBXBuildFile; fileRef = 669ED2FE2EE18702005F3ECA /* librime-octagram.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		669ED3022EE18702005F3ECA /* librime-lua.dylib in Copy Rime plugins */ = {isa = PBXBuildFile; fileRef = 669ED2FF2EE18702005F3ECA /* librime-lua.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		669ED3092EE18914005F3ECA /* rime_deployer in Copy Files */ = {isa = PBXBuildFile; fileRef = 669ED3072EE18914005F3ECA /* rime_deployer */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		669ED30A2EE18914005F3ECA /* rime_dict_manager in Copy Files */ = {isa = PBXBuildFile; fileRef = 669ED3082EE18914005F3ECA /* rime_dict_manager */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		669ED2F92EE185CB005F3ECA /* Copy 3rd-party Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				669ED2FB2EE1866E005F3ECA /* librime.1.dylib in Copy 3rd-party Frameworks */,
+			);
+			name = "Copy 3rd-party Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		669ED2FC2EE186DC005F3ECA /* Copy Rime plugins */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				669ED3002EE18702005F3ECA /* librime-predict.dylib in Copy Rime plugins */,
+				669ED3012EE18702005F3ECA /* librime-octagram.dylib in Copy Rime plugins */,
+				669ED3022EE18702005F3ECA /* librime-lua.dylib in Copy Rime plugins */,
+			);
+			name = "Copy Rime plugins";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		669ED3062EE188E6005F3ECA /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				669ED3092EE18914005F3ECA /* rime_deployer in Copy Files */,
+				669ED30A2EE18914005F3ECA /* rime_dict_manager in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		66998FBF2EE03A0400963BDE /* oim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		669ED2EA2EE17DE2005F3ECA /* InputMethodKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputMethodKit.framework; path = System/Library/Frameworks/InputMethodKit.framework; sourceTree = SDKROOT; };
 		669ED2EC2EE17DEF005F3ECA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		669ED2EE2EE17DFA005F3ECA /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		669ED2FA2EE1866E005F3ECA /* librime.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = librime.1.dylib; path = lib/librime.1.dylib; sourceTree = "<group>"; };
+		669ED2FD2EE18702005F3ECA /* librime-predict.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "librime-predict.dylib"; path = "lib/rime-plugins/librime-predict.dylib"; sourceTree = "<group>"; };
+		669ED2FE2EE18702005F3ECA /* librime-octagram.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "librime-octagram.dylib"; path = "lib/rime-plugins/librime-octagram.dylib"; sourceTree = "<group>"; };
+		669ED2FF2EE18702005F3ECA /* librime-lua.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "librime-lua.dylib"; path = "lib/rime-plugins/librime-lua.dylib"; sourceTree = "<group>"; };
+		669ED3072EE18914005F3ECA /* rime_deployer */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = rime_deployer; path = bin/rime_deployer; sourceTree = "<group>"; };
+		669ED3082EE18914005F3ECA /* rime_dict_manager */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = rime_dict_manager; path = bin/rime_dict_manager; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -44,6 +95,12 @@
 		66998FB62EE03A0400963BDE = {
 			isa = PBXGroup;
 			children = (
+				669ED3072EE18914005F3ECA /* rime_deployer */,
+				669ED3082EE18914005F3ECA /* rime_dict_manager */,
+				669ED2FF2EE18702005F3ECA /* librime-lua.dylib */,
+				669ED2FE2EE18702005F3ECA /* librime-octagram.dylib */,
+				669ED2FD2EE18702005F3ECA /* librime-predict.dylib */,
+				669ED2FA2EE1866E005F3ECA /* librime.1.dylib */,
 				66998FC12EE03A0400963BDE /* oim */,
 				669ED2E92EE17DE2005F3ECA /* Frameworks */,
 				66998FC02EE03A0400963BDE /* Products */,
@@ -78,6 +135,9 @@
 				66998FBB2EE03A0400963BDE /* Sources */,
 				66998FBC2EE03A0400963BDE /* Frameworks */,
 				66998FBD2EE03A0400963BDE /* Resources */,
+				669ED2F92EE185CB005F3ECA /* Copy 3rd-party Frameworks */,
+				669ED2FC2EE186DC005F3ECA /* Copy Rime plugins */,
+				669ED3062EE188E6005F3ECA /* Copy Files */,
 			);
 			buildRules = (
 			);
