@@ -29,8 +29,3 @@ copy-rime-binary:
 copy-opencc-data:
 	mkdir -p data/opencc
 	cp $(OPENCC_DATA_OUTPUT) data/opencc/
-
-copy-opencc-data:
-	mkdir -p data/opencc
-	cp $(OPENCC_DATA_OUTPUT) data/opencc/
-	#cp $(PLUM_OPENCC_OUTPUT) data/opencc/ > /dev/null 2>&1 || true
