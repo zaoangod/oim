@@ -21,24 +21,25 @@ rime_deps_archive="rime-deps-${rime_git_hash}-macOS-universal.tar.bz2"
 rime_deps_download_url="https://github.com/rime/librime/releases/download/${rime_version}/${rime_deps_archive}"
 
 echo "---------start download lib---------"
-rime_directory="${base_directory}/download/rime"
-rime_deps_directory="${base_directory}/download/rime_deps"
+rime_directory="${base_directory}/library/download/rime"
+rime_deps_directory="${base_directory}/library/download/rime_deps"
 
 echo "base_directory: ${base_directory}"
 echo "rime_directory: ${rime_directory}"
 echo "rime_deps_directory: ${rime_deps_directory}"
 
-mkdir -p ${rime_directory} && mkdir -p ${rime_deps_directory} && (
-    cd ${rime_directory}
-    echo "-> download ${rime_archive}: ${rime_download_url}"
-    curl -# -LO "${rime_download_url}"
-    tar --bzip2 -xf "${rime_archive}"
+mkdir -p ${rime_directory}
+cd ${rime_directory}
+echo "-> download ${rime_archive}: ${rime_download_url}"
+curl -# -LO "${rime_download_url}"
+tar --bzip2 -xf "${rime_archive}"
 
-    cd ${rime_deps_directory}
-    echo "-> download ${rime_deps_archive}: ${rime_deps_download_url}"
-    curl -# -LO "${rime_deps_download_url}"
-    tar --bzip2 -xf "${rime_deps_archive}"
-)
+mkdir -p ${rime_deps_directory}
+cd ${rime_deps_directory}
+echo "-> download ${rime_deps_archive}: ${rime_deps_download_url}"
+curl -# -LO "${rime_deps_download_url}"
+tar --bzip2 -xf "${rime_deps_archive}"
+
 
 mkdir -p ${base_directory}/library/rime/share/
 cp -R ${rime_directory}/dist ${base_directory}/library/rime/
