@@ -17,8 +17,8 @@ INSTALL_NAME_TOOL = $(shell xcrun -find install_name_tool)
 INSTALL_NAME_TOOL_ARGS = -add_rpath @loader_path/../Frameworks
 
 copy-rime-binary:
-	mkdir -p lib
-	mkdir -p bin
+	mkdir lib/
+	mkdir bin/
 	cp -L $(RIME_LIB_DIR)/$(RIME_LIBRARY_FILE_NAME) lib/
 	cp -pR $(RIME_LIB_DIR)/rime-plugins lib/
 	cp $(RIME_BIN_DIR)/rime_deployer bin/
@@ -29,3 +29,25 @@ copy-rime-binary:
 copy-opencc-data:
 	mkdir -p data/opencc
 	cp $(OPENCC_DATA_OUTPUT) data/opencc/
+
+#.PHONY: clean clean-deps
+#
+#clean:
+#	rm -rf build > /dev/null 2>&1 || true
+#	rm build.log > /dev/null 2>&1 || true
+#	rm bin/* > /dev/null 2>&1 || true
+#	rm lib/* > /dev/null 2>&1 || true
+#	rm lib/rime-plugins/* > /dev/null 2>&1 || true
+#	rm data/plum/* > /dev/null 2>&1 || true
+#	rm data/opencc/* > /dev/null 2>&1 || true
+#
+#clean-package:
+#	rm -rf package/*appcast.xml > /dev/null 2>&1 || true
+#	rm -rf package/*.pkg > /dev/null 2>&1 || true
+#	rm -rf package/sign_update > /dev/null 2>&1 || true
+#
+#clean-deps:
+#	$(MAKE) -C plum clean
+#	$(MAKE) -C librime clean
+#	rm -rf librime/dist > /dev/null 2>&1 || true
+#	$(MAKE) clean-sparkle

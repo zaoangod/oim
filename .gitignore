@@ -1,4 +1,6 @@
-lib
+bin/*
+lib/*
+data/opencc/
 bin
 data
 .idea
