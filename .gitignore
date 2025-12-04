@@ -1,6 +1,6 @@
-#bin/*
-#lib/*
-#data/opencc/
+bin/*
+lib/*
+data/opencc/
 .idea
 library
 .DS_Store
